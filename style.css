@@ -1,0 +1,51 @@
+/* Shared by both pages. Plain CSS, no build step, no external font: the site has to be
+   hostable by dropping the folder anywhere, and a privacy policy that pulls a font from
+   a third-party CDN would contradict itself on the first request. */
+:root {
+  color-scheme: light dark;
+  --ink: #1b1b1a;
+  --ink-soft: #55534e;
+  --bg: #faf7f2;
+  --rule: #e0dbd2;
+  --accent: #0f5f56;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece8e1;
+    --ink-soft: #a8a29a;
+    --bg: #16161a;
+    --rule: #32322f;
+    --accent: #6fb9ad;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 5rem;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main { max-width: 42rem; margin: 0 auto; }
+
+h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .25rem; }
+h2 { font-size: 1.2rem; margin: 2.5rem 0 .5rem; }
+h3 { font-size: 1rem; margin: 1.75rem 0 .35rem; }
+
+.meta { color: var(--ink-soft); font-size: .9rem; margin: 0 0 2rem; }
+.lead { font-size: 1.05rem; }
+
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 4rem 0 3rem; }
+
+a { color: var(--accent); }
+
+.switch { margin: 0 0 2.5rem; font-size: .9rem; }
+.switch a + a { margin-left: 1rem; }
+
+strong { font-weight: 600; }
