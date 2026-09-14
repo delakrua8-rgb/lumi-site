@@ -15,13 +15,7 @@ privacy.html   policy    →  App Store Connect ▸ Privacy Policy URL
 style.css      shared
 ```
 
-## Before publishing
-
-Replace `ПОЧТА@example.com` — two places in each page:
-
-```bash
-grep -rn "ПОЧТА@example.com" site/
-```
+The contact address is `delakrua8@gmail.com`, in both pages, in both languages.
 
 ## Publishing
 
