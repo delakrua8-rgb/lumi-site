@@ -17,19 +17,25 @@ style.css      shared
 
 The contact address is `delakrua8@gmail.com`, in both pages, in both languages.
 
-## Publishing
+## Published at
 
-Anywhere that serves static files. GitHub Pages is free and its `github.io` URLs are
-accepted by Apple:
+```
+https://delakrua8-rgb.github.io/lumi-site/              Support URL
+https://delakrua8-rgb.github.io/lumi-site/privacy.html  Privacy Policy URL
+```
 
-1. A **new, separate, public** repository — `lumi-site` or similar. Separate on purpose:
-   this repository holds the app's source, and publishing the policy must not mean
-   publishing everything else.
-2. Copy the contents of this folder into it and push.
-3. Settings ▸ Pages ▸ Source: `main`, folder `/ (root)`.
-4. The URLs become `https://<account>.github.io/lumi-site/` and `…/privacy.html`.
+GitHub Pages, from the public `lumi-site` repository — separate from this one on purpose:
+this repository is private and holds the app's source, and publishing the policy must not
+mean publishing everything else.
 
-Keep this folder as the source of truth and copy from it, so the published policy and the
-app that the policy describes are changed in the same commit. A privacy policy that has
-drifted from the code is worse than none at all — it is a false statement rather than a
-missing one.
+## Updating
+
+This folder is the source of truth. Edit here, commit, then publish the folder alone:
+
+```bash
+git subtree push --prefix=site site main
+```
+
+Editing here rather than in the published repository is what keeps the policy and the code
+it describes changing in the same commit. A privacy policy that has drifted from the code
+is worse than none at all: it is a false statement rather than a missing one.
